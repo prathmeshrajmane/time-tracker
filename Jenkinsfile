@@ -20,5 +20,11 @@ pipeline {
       }
     }
 
+    stage('Archive') {
+      steps {
+        archiveArtifacts 'time-tracker-web'
+      }
+    }
+
   }
 }
