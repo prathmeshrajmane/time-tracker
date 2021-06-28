@@ -20,11 +20,5 @@ pipeline {
       }
     }
 
-    stage('Archive') {
-      steps {
-            archiveArtifacts artifacts: 'output/*.txt', excludes: 'output/*.md'
-      }
-    }
-
   }
 }
