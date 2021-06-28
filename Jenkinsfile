@@ -22,7 +22,7 @@ pipeline {
 
     stage('Archive') {
       steps {
-        archiveArtifacts 'time-tracker-web'
+        archiveArtifacts(artifacts: '/var/lib/jenkins/workspace/time-tracker_master/web/target/*.war', onlyIfSuccessful: true)
       }
     }
 
