@@ -19,8 +19,12 @@ pipeline {
         sh 'mvn package'
       }
     }
-    
-    
-   }
-  
+
+    stage('Archive') {
+      steps {
+        archiveArtifacts '**/target/time-tracker-web-0.5.0-SNAPSHOT.war'
+      }
+    }
+
+  }
 }
